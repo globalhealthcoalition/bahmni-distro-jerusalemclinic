@@ -31,13 +31,15 @@
 
     <!-- Configs -->
     <bahmniconfigVersion>1.0-SNAPSHOT</bahmniconfigVersion>
+    <openmrsconfigVersion>1.0-SNAPSHOT</openmrsconfigVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>dev</bahmniappsRevision>
     
     <!-- In dev -->
     <bahmnicoreVersion>0.89-SNAPSHOT</bahmnicoreVersion>
-      
+    <initializerVersion>1.0.1-SNAPSHOT</initializerVersion>
+
     <!-- Bahmni modules -->
     <bahmniieomodVersion>0.89-SNAPSHOT</bahmniieomodVersion>
     <rulesengineVersion>0.89-SNAPSHOT</rulesengineVersion>
@@ -69,6 +71,12 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.globalhealthcoalition</groupId>
+      <artifactId>openmrs-config-haiti</artifactId>
+      <type>zip</type>
+      <version>${openmrsconfigVersion}</version>
+    </dependency>
     <dependency>
       <groupId>org.globalhealthcoalition</groupId>
       <artifactId>bahmni-config-haiti</artifactId>
@@ -217,6 +225,11 @@
       <artifactId>exti18n-omod</artifactId>
       <version>${exti18nVersion}</version>
     </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>initializer-omod</artifactId>
+      <version>${initializerVersion}</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -275,7 +288,19 @@
             </configuration>
           </execution>
           <!-- OpenMRS config -->
-         
+          <execution>
+            <id>copy-openmrs-config</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <excludeTransitive>true</excludeTransitive>
+              <useBaseVersion>true</useBaseVersion>
+              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
+              <includeArtifactIds>openmrs-config-haiti</includeArtifactIds>
+            </configuration>
+          </execution>
           <!-- Bahmni config -->
           <execution>
             <id>copy-bahmni-config</id>
@@ -305,6 +330,21 @@
                 <move todir="${distro.modulesDir}">
                   <fileset dir="${distro.modulesDir}" />
                   <mapper type="regexp" from="^(.+)-omod-(.+)\.jar" to="\1-\2.omod" />
+                </move>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>rename-openmrs-config</id>
+            <phase>package</phase>
+            <configuration>
+              <target>
+                <move todir="${distro.openmrsconfigDir}">
+                  <fileset dir="${distro.openmrsconfigDir}" />
+                  <mapper type="regexp" from="^openmrs-config-haiti(.+)\.zip" to="config.zip" />
                 </move>
               </target>
             </configuration>
