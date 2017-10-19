@@ -37,7 +37,7 @@
     
     <!-- In dev -->
     <bahmnicoreVersion>0.89-SNAPSHOT</bahmnicoreVersion>
-
+      
     <!-- Bahmni modules -->
     <bahmniieomodVersion>0.89-SNAPSHOT</bahmniieomodVersion>
     <rulesengineVersion>0.89-SNAPSHOT</rulesengineVersion>
@@ -48,8 +48,9 @@
     <bedmanagementVersion>5.6-SNAPSHOT</bedmanagementVersion>
 
     <!-- OpenMRS modules -->
+    <exti18nVersion>1.0.0</exti18nVersion>
     <reportingVersion>1.12.0</reportingVersion>
-    <addresshierarchyVersion>2.9</addresshierarchyVersion>
+    <addresshierarchyVersion>2.10.0</addresshierarchyVersion>
     <appframeworkVersion>2.10.0</appframeworkVersion>
     <calculationVersion>1.2</calculationVersion>
     <emrapiVersion>1.22.1</emrapiVersion>
@@ -210,6 +211,11 @@
       <groupId>org.ict4h.openmrs</groupId>
       <artifactId>openmrs-atomfeed-omod</artifactId>
       <version>${atomfeedVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>exti18n-omod</artifactId>
+      <version>${exti18nVersion}</version>
     </dependency>
   </dependencies>
 
