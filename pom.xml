@@ -3,7 +3,7 @@
   <groupId>org.globalhealthcoalition</groupId>
   <artifactId>openmrs-distro-haiti</artifactId>
   <name>Global Health Coalition Haiti distribution</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>pom</packaging>
 
   <developers>
@@ -16,7 +16,7 @@
     <url>http://www.mekomsolutions.com</url>
   </organization>
 
- <properties>
+  <properties>
 
     <distro.baseDir>${project.build.directory}/${project.artifactId}-${project.version}</distro.baseDir>
     <distro.modulesDir>${distro.baseDir}/modules</distro.modulesDir>
@@ -30,19 +30,16 @@
     <openMRSVersion>2.1.1</openMRSVersion>
     
     <!-- Configs -->
-    <openmrsconfigVersion>1.0-SNAPSHOT</openmrsconfigVersion>
-    <bahmniconfigVersion>1.0-SNAPSHOT</bahmniconfigVersion>
+    <openmrsconfigVersion>1.0</openmrsconfigVersion>
+    <bahmniconfigVersion>1.0</bahmniconfigVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>0.90.x</bahmniappsRevision>
     
     <!-- In dev -->
-    <initializerVersion>1.0.1-SNAPSHOT</initializerVersion>
-    <bahmnicoreVersion>0.90-SNAPSHOT</bahmnicoreVersion>
-    <reportingVersion>1.14.0-SNAPSHOT</reportingVersion>
-    <mksreportsVersion>1.1.1-SNAPSHOT</mksreportsVersion>
 
     <!-- Bahmni modules -->
+    <bahmnicoreVersion>0.90.1</bahmnicoreVersion>
     <bahmniieomodVersion>0.90-SNAPSHOT</bahmniieomodVersion>
     <rulesengineVersion>0.90-SNAPSHOT</rulesengineVersion>
     <idgenwebservicesVersion>1.2-SNAPSHOT</idgenwebservicesVersion>
@@ -62,10 +59,13 @@
     <eventVersion>2.5</eventVersion>
     <htmlwidgetsVersion>1.8.0</htmlwidgetsVersion>
     <idgenVersion>4.4.1</idgenVersion>
+    <initializerVersion>1.0.1</initializerVersion>
     <legacyuiVersion>1.3.3</legacyuiVersion>
     <metadatamappingVersion>1.3.1</metadatamappingVersion>
     <metadatasharingVersion>1.2.2</metadatasharingVersion>
+    <mksreportsVersion>1.1.1</mksreportsVersion>
     <providermanagementVersion>2.5.0</providermanagementVersion>
+    <reportingVersion>1.15.0</reportingVersion>
     <serializationVersion>0.2.12</serializationVersion>
     <uicommonsVersion>2.3.0</uicommonsVersion>
     <uiframeworkVersion>3.8</uiframeworkVersion>
