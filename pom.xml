@@ -3,7 +3,7 @@
   <groupId>org.globalhealthcoalition</groupId>
   <artifactId>openmrs-distro-haiti</artifactId>
   <name>Global Health Coalition Haiti distribution</name>
-  <version>1.1.0</version>
+  <version>1.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <developers>
