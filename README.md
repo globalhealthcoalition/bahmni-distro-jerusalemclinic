@@ -13,13 +13,13 @@ mvn clean package
 ```
 ### Target inventory:
 
-* `bahmniapps/`
-<br/>The target version of Bahmni Apps or 'Bahmni EMR', the client-side EMR of Bahmni.
+* `bahmni_emr/`
+<br/>The target version of the front-end apps that makes 'Bahmni EMR'.
 * `bahmni_config/`
 <br/>The bespoke Bahmni configuration (more [here](https://github.com/globalhealthcoalition/bahmni-config-haiti)) to be consumed by Bahmni Apps.
-* `modules/`
+* `openmrs_modules/`
 <br/>The required set of OpenMRS modules.
 * `openmrs_config/`
 <br/>The OpenMRS bespoke configuration (more [here](https://github.com/globalhealthcoalition/openmrs-config-haiti)) to be processed by the [Initializer module](https://github.com/mekomsolutions/openmrs-module-initializer).
-* `war/`
+* `openmrs_core/`
 The target version of OpenMRS Core.

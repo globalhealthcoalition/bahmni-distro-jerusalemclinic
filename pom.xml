@@ -19,12 +19,11 @@
   <properties>
 
     <distro.baseDir>${project.build.directory}/${project.artifactId}-${project.version}</distro.baseDir>
-    <distro.modulesDir>${distro.baseDir}/modules</distro.modulesDir>
-    <distro.bahmniappsDir>${distro.baseDir}/bahmniapps</distro.bahmniappsDir>
+    <distro.bahmniemrDir>${distro.baseDir}/bahmni_emr</distro.bahmniemrDir>
     <distro.openmrsconfigDir>${distro.baseDir}/openmrs_config</distro.openmrsconfigDir>
     <distro.bahmniconfigDir>${distro.baseDir}/bahmni_config</distro.bahmniconfigDir>
-    <distro.warDir>${distro.baseDir}/war</distro.warDir>
-    <distro.modulesDir>${distro.baseDir}/modules</distro.modulesDir>
+    <distro.openmrscoreDir>${distro.baseDir}/openmrs_core</distro.openmrscoreDir>
+    <distro.openmrsmodulesDir>${distro.baseDir}/openmrs_modules</distro.openmrsmodulesDir>
 
     <!-- Core -->
     <openMRSVersion>2.1.1</openMRSVersion>
@@ -281,7 +280,7 @@
             <configuration>
               <excludeTransitive>true</excludeTransitive>
               <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.warDir}</outputDirectory>
+              <outputDirectory>${distro.openmrscoreDir}</outputDirectory>
               <includeTypes>war</includeTypes>
             </configuration>
           </execution>
@@ -295,7 +294,7 @@
             <configuration>
               <excludeTransitive>true</excludeTransitive>
               <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.modulesDir}</outputDirectory>
+              <outputDirectory>${distro.openmrsmodulesDir}</outputDirectory>
               <includeTypes>jar, omod</includeTypes> <!-- copying jars and omods only -->
             </configuration>
           </execution>
@@ -304,7 +303,7 @@
             <id>copy-openmrs-config</id>
             <phase>package</phase>
             <goals>
-              <goal>copy-dependencies</goal>
+              <goal>unpack-dependencies</goal>
             </goals>
             <configuration>
               <excludeTransitive>true</excludeTransitive>
@@ -318,7 +317,7 @@
             <id>copy-bahmni-config</id>
             <phase>package</phase>
             <goals>
-              <goal>copy-dependencies</goal>
+              <goal>unpack-dependencies</goal>
             </goals>
             <configuration>
               <excludeTransitive>true</excludeTransitive>
@@ -332,12 +331,12 @@
             <id>copy-bahmniapps</id>
             <phase>package</phase>
             <goals>
-              <goal>copy-dependencies</goal>
+              <goal>unpack-dependencies</goal>
             </goals>
             <configuration>
               <excludeTransitive>true</excludeTransitive>
               <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.bahmniappsDir}</outputDirectory>
+              <outputDirectory>${distro.bahmniemrDir}/bahmniapps</outputDirectory>
               <includeArtifactIds>bahmniapps</includeArtifactIds>
             </configuration>
           </execution>
@@ -353,8 +352,8 @@
             <phase>package</phase>
             <configuration>
               <target>
-                <move todir="${distro.modulesDir}">
-                  <fileset dir="${distro.modulesDir}" />
+                <move todir="${distro.openmrsmodulesDir}">
+                  <fileset dir="${distro.openmrsmodulesDir}" />
                   <mapper type="regexp" from="^(.+)-omod-(.+)\.jar" to="\1-\2.omod" />
                 </move>
               </target>
