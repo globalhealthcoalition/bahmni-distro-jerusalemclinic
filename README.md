@@ -1,12 +1,12 @@
 ![alt tag](readme/ghc-logo-200x205.png)
 
-# Global Health Coalition Haiti distribution
+# Jerusalem Clinic distribution
 
-_A lightweight, ready-to-use Bahmni distribution for Haiti outpatient clinics to support standardized terminology, work processes, and reporting analytics._
+_A community health clinic distribution to support standardized terminology, clinical processes, and reporting analytics at the Jerusalem Clinic in Canaan, Haiti_
 
 -----
 
-This repository maintains the 'distro POM' for the _Global Health Coalition Haiti distribution_.
+This repository maintains the 'distro POM' for Global Health Coalition's Bahmni distribution in use at the Jerusalem Clinic in Canaan, Haiti.
 It downloads and brings in one place all artifacts needed by the distribution, simply run:
 ```
 mvn clean package

@@ -1,8 +1,8 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.globalhealthcoalition</groupId>
-  <artifactId>openmrs-distro-haiti</artifactId>
-  <name>Global Health Coalition Haiti distribution</name>
+  <artifactId>bahmni-distro-jerusalemclinic</artifactId>
+  <name>Jerusalem Clinic distribution</name>
   <version>1.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
