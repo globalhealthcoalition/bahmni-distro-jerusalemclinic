@@ -81,13 +81,13 @@
   <dependencies>
     <dependency>
       <groupId>org.globalhealthcoalition</groupId>
-      <artifactId>openmrs-config-haiti</artifactId>
+      <artifactId>openmrs-config-jerusalemclinic</artifactId>
       <type>zip</type>
       <version>${openmrsconfigVersion}</version>
     </dependency>
     <dependency>
       <groupId>org.globalhealthcoalition</groupId>
-      <artifactId>bahmni-config-haiti</artifactId>
+      <artifactId>bahmni-config-jerusalemclinic</artifactId>
       <type>zip</type>
       <version>${bahmniconfigVersion}</version>
     </dependency>
@@ -324,7 +324,7 @@
               <excludeTransitive>true</excludeTransitive>
               <useBaseVersion>true</useBaseVersion>
               <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
-              <includeArtifactIds>openmrs-config-haiti</includeArtifactIds>
+              <includeArtifactIds>openmrs-config-jerusalemclinic</includeArtifactIds>
             </configuration>
           </execution>
           <!-- Bahmni config -->
@@ -338,7 +338,7 @@
               <excludeTransitive>true</excludeTransitive>
               <useBaseVersion>true</useBaseVersion>
               <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>
-              <includeArtifactIds>bahmni-config-haiti</includeArtifactIds>
+              <includeArtifactIds>bahmni-config-jerusalemclinic</includeArtifactIds>
             </configuration>
           </execution>
           <!-- Bahmni Apps -->
@@ -398,7 +398,7 @@
               <target>
                 <move todir="${distro.openmrsconfigDir}">
                   <fileset dir="${distro.openmrsconfigDir}" />
-                  <mapper type="regexp" from="^openmrs-config-haiti(.+)\.zip" to="config.zip" />
+                  <mapper type="regexp" from="^openmrs-config-jerusalemclinic(.+)\.zip" to="config.zip" />
                 </move>
               </target>
             </configuration>
@@ -413,7 +413,7 @@
               <target>
                 <move todir="${distro.bahmniconfigDir}">
                   <fileset dir="${distro.bahmniconfigDir}" />
-                  <mapper type="regexp" from="^bahmni-config-haiti(.+)\.zip" to="config.zip" />
+                  <mapper type="regexp" from="^bahmni-config-jerusalemclinic(.+)\.zip" to="config.zip" />
                 </move>
               </target>
             </configuration>
