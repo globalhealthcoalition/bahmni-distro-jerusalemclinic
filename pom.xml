@@ -29,8 +29,8 @@
     <openMRSVersion>2.1.1</openMRSVersion>
     
     <!-- Configs -->
-    <openmrsconfigVersion>1.2.1</openmrsconfigVersion>
-    <bahmniconfigVersion>1.2.0</bahmniconfigVersion>
+    <openmrsconfigVersion>1.2.2-SNAPSHOT</openmrsconfigVersion>
+    <bahmniconfigVersion>1.2.1-SNAPSHOT</bahmniconfigVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>a63f511</bahmniappsRevision>
