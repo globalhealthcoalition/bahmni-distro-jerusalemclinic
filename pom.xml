@@ -3,7 +3,7 @@
   <groupId>org.globalhealthcoalition</groupId>
   <artifactId>bahmni-distro-jerusalemclinic</artifactId>
   <name>Jerusalem Clinic distribution</name>
-  <version>1.3.0</version>
+  <version>1.4.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <developers>
@@ -29,8 +29,8 @@
     <openMRSVersion>2.1.1</openMRSVersion>
 
     <!-- Configs -->
-    <openmrsconfigVersion>1.2.2</openmrsconfigVersion>
-    <bahmniconfigVersion>1.2.1</bahmniconfigVersion>
+    <openmrsconfigVersion>1.3.0-SNAPSHOT</openmrsconfigVersion>
+    <bahmniconfigVersion>1.3.0-SNAPSHOT</bahmniconfigVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>a63f511</bahmniappsRevision>
