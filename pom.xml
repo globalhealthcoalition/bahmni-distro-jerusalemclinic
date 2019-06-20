@@ -35,15 +35,11 @@
     <!-- Bahmni Apps -->
     <bahmniappsRevision>a63f511</bahmniappsRevision>
 
-    <!-- Bahmni Connect -->
-    <bahmniconnectRevision>d1b5dac</bahmniconnectRevision>
-
     <!-- In dev -->
 
     <!-- Bahmni modules -->
     <bahmnicoreVersion>0.90.1</bahmnicoreVersion>
     <bahmniieomodVersion>0.90-SNAPSHOT</bahmniieomodVersion>
-    <bahmniOfflineSyncVersion>0.90.2</bahmniOfflineSyncVersion>
     <rulesengineVersion>0.90-SNAPSHOT</rulesengineVersion>
     <idgenwebservicesVersion>1.2-SNAPSHOT</idgenwebservicesVersion>
     <episodesVersion>1.0-SNAPSHOT</episodesVersion>
@@ -96,12 +92,6 @@
       <artifactId>bahmniapps</artifactId>
       <type>zip</type>
       <version>${bahmniappsRevision}</version>
-    </dependency>
-    <dependency>
-      <groupId>net.mekomsolutions</groupId>
-      <artifactId>bahmniconnect</artifactId>
-      <type>zip</type>
-      <version>${bahmniconnectRevision}</version>
     </dependency>
     <dependency>
       <groupId>org.openmrs.web</groupId>
@@ -270,11 +260,6 @@
       <artifactId>exti18n-omod</artifactId>
       <version>${exti18nVersion}</version>
     </dependency>
-    <dependency>
-      <groupId>org.bahmni.module</groupId>
-      <artifactId>bahmniOfflineSync-omod</artifactId>
-      <version>${bahmniOfflineSyncVersion}</version>
-    </dependency>
   </dependencies>
 
   <build>
@@ -353,20 +338,6 @@
               <useBaseVersion>true</useBaseVersion>
               <outputDirectory>${distro.bahmniemrDir}/bahmniapps</outputDirectory>
               <includeArtifactIds>bahmniapps</includeArtifactIds>
-            </configuration>
-          </execution>
-          <!-- Bahmni Connect -->
-          <execution>
-            <id>copy-bahmniconnect</id>
-            <phase>package</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.bahmniemrDir}/bahmniconnect</outputDirectory>
-              <includeArtifactIds>bahmniconnect</includeArtifactIds>
             </configuration>
           </execution>
         </executions>
